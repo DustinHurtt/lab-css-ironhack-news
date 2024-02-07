@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
 }
-  
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -175,5 +175,89 @@ header {
 .btn-blue {
   background-color: #007bff;
 }
+
+.menubutton {
+  visibility: hidden;
+  display: none;
+  height: 0;
+}
   
 /* Write your CSS below */
+
+@media (max-width: 760px) {
+  
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .main-article {
+    flex-direction: column;
+    align-items: center;
+    width: 85vw
+  }
+
+  .main-article .image {
+    width: 95%;
+    padding: 0 20px;
+    height: auto;
+  }
+  
+  .main-article .content {
+    width: 95%;
+    padding: 0 20px;
+    height: auto;
+  }
+  
+  .articles-container {
+    flex-direction: column;
+  }
+
+  .article {
+    width: 100%;
+    margin: 4% 0
+  }
+
+}
+
+/* (width > 760px and width < 1024px) */
+
+@media (min-width: 760.01px) and (max-width: 1024px) {
+
+  .navbar {
+    justify-content: space-evenly;
+  }
+
+  .navbar li {
+    width: 25%;
+  }
+
+  .articles-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .article {
+    width: 45%;
+    margin: 4% 0
+  }
+
+}
+
+@media(max-width: 499px){
+  .menubutton{
+    visibility: inherit;
+    display: inherit;
+    height: 7%
+  }
+   .navbar {
+    display: none;
+    height: 0;
+  }
+}
